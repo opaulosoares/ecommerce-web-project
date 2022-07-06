@@ -264,7 +264,7 @@ Senha: admin
 
 #### Teste de permissão de usuário comum
 
-1. Se logado como usuário comum (nesse caso, com a conta `john@email.com`), o usuário é barrado de acessar as rotas de administrador (como `/admin/users`) através da mensagem de erro `Please log-in as admin to see this page!`. A rota só pode ser acessada por uma conta de administrador.
+1. Se logado como usuário comum (nesse caso, com a conta `john@email.com`), o usuário é barrado de acessar as rotas de administrador (como `/admin/dashboard`) através da mensagem de erro `Please log-in as admin to see this page!`. A rota só pode ser acessada por uma conta de administrador.
 
 #### Teste de edição de produtos
 

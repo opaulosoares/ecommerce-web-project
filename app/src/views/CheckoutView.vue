@@ -2,7 +2,7 @@
     <Navbar />
 
     <div class="flex flex-col justify-center max-w-screen-md mx-auto">
-        <div class="w-full max-w-screen-md my-4">
+        <div class="w-full max-w-screen-md px-8 py-8">
             <Empty
                 :description="`In order to checkout, you need to add some products to your cart.`"
                 v-if="isCartEmpty"
@@ -42,7 +42,38 @@
             >
         </div>
     </div>
-    <Modal :visible="openModal" ok-text="Finish order" @ok="finishOrder">
+    <Modal
+        title="Confirm order"
+        :visible="openModal"
+        ok-text="Finish order"
+        @ok="finishOrder"
+    >
+        <Alert
+            type="info"
+            message="Before finishing your order, please verify if this is your current
+            address"
+        />
+        <div class="flex p-8">
+            <p>{{ this.$store.getters.user.address }}</p>
+            ,
+            <p>{{ this.$store.getters.user.city }}</p>
+            ,
+            <p>{{ this.$store.getters.user.state }}</p>
+        </div>
+
+        <div>
+            <Alert
+                type="warning"
+                message="If it's wrong or needs to be updated, please edit your address
+                in the account pages"
+            />
+        </div>
+
+        <div class="py-4">
+            <Button type="ghost" @click="this.$router.push('/account')"
+                >Go to account page</Button
+            >
+        </div>
     </Modal>
 </template>
 
@@ -56,6 +87,7 @@ import {
     Steps,
     Step,
     Modal,
+    Alert,
     message,
 } from "ant-design-vue";
 
@@ -70,6 +102,7 @@ import Checkout from "@/components/Checkout/Checkout.vue";
 
 export default {
     components: {
+        Alert,
         Navbar,
         Footer,
         PageHeader,

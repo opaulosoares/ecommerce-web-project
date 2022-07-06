@@ -59,7 +59,7 @@ const routes = [
                 next();
             } else {
                 message.info("You must be logged in to finish your order!");
-                next("/register");
+                next("/");
             }
         },
     },
@@ -83,6 +83,11 @@ const routes = [
             }
         },
     },
+    {
+        path: "/about",
+        component: () => import("../views/AboutView.vue"),
+    },
+
     {
         path: "/404",
         component: () => import("../views/NotFoundView.vue"),

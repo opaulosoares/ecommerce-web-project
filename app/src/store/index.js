@@ -114,6 +114,33 @@ export default createStore({
         },
     },
     actions: {
+        async editProduct(context, data) {
+            /* filter empty fields from user */
+            const filteredProduct = Object.keys(data.modified).reduce(
+                (acc, key) => {
+                    if (data.modified[key]) {
+                        acc[key] = data.modified[key];
+                    }
+                    return acc;
+                },
+                {}
+            );
+
+            data.original = {
+                ...data.original,
+                ...filteredProduct,
+            };
+
+            fetch(`http://localhost:3000/products/${data.original.id}`, {
+                method: "PATCH",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data.original),
+            });
+
+            context.state.products[data.original.id] = data.original;
+        },
         async registerUser({ commit }, user) {
             user.role = "Costumer";
 
@@ -137,8 +164,6 @@ export default createStore({
             for (const item of data) {
                 commit("addProduct", item);
             }
-
-            return data;
         },
         async fetchUsers({ commit }) {
             let users = await fetch(`http://localhost:3000/users`);

@@ -2,11 +2,11 @@
     <div>
         <Navbar />
         <div class="mx-auto max-w-screen-2xl" id="main-container">
-            <PageHeader>
+            <PageHeader title="Register">
                 <div class="w-full h-full">
-                    <div class="mt-4">
+                    <div>
                         <Form :model="formState">
-                            <div class="flex items-center gap-4 pt-8 pb-2">
+                            <div class="flex flex-col items-start">
                                 <p class="text-lg font-medium">Personal</p>
                                 <p class="text-gray-400">
                                     Always keep your phone updated so we can
@@ -209,7 +209,7 @@
                                 </FormItem>
                             </div>
 
-                            <div class="flex items-center gap-4 pt-4 pb-2">
+                            <div class="flex flex-col items-start">
                                 <p class="text-lg font-medium">Payment</p>
                                 <p class="text-gray-400">
                                     Currently we only work with credit card

@@ -1,0 +1,42 @@
+module.exports = {
+    content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+    theme: {
+        extend: {
+            colors: {
+                transparent: "transparent",
+                current: "currentColor",
+                black: "#000",
+                white: "#fff",
+                fluffBlue: {
+                    1: "#f3f2ff",
+                    2: "#d8d7f6",
+                    3: "#bdc0ee",
+                    4: "#8d96e3",
+                    5: "#6475d6",
+                    6: "#4559c8",
+                    7: "#2e41b6",
+                    8: "#2029a2",
+                    9: "#221f8a",
+                    10: "#281c6f",
+                    11: "#271752",
+                    12: "#1e1034" /* dark */,
+                },
+                fluffRed: {
+                    1: "#fff2f2",
+                    2: "#ffcfcf",
+                    3: "#ffadac",
+                    4: "#ff6e6c" /* primary */,
+                    5: "#f93b39",
+                    6: "#f11311",
+                    7: "#e70200",
+                    8: "#da0100",
+                    9: "#c90100",
+                    10: "#b50100",
+                    11: "#9e0000",
+                    12: "#870000",
+                },
+            },
+        },
+    },
+    plugins: [require("@tailwindcss/forms")],
+};

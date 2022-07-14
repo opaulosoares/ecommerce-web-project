@@ -79,32 +79,6 @@ export default createStore({
         clearCart: (state) => (
             (state.cart = {}), localStorage.removeItem("cart")
         ),
-
-        editUser: (state, user) => {
-            /* filter empty fields from user */
-            const filteredUser = Object.keys(user).reduce((acc, key) => {
-                if (user[key]) {
-                    acc[key] = user[key];
-                }
-                return acc;
-            }, {});
-
-            state.user = {
-                ...state.user,
-                ...filteredUser,
-            };
-
-            fetch(`http://localhost:3000/users/${state.user.id}`, {
-                method: "PATCH",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(state.user),
-            });
-
-            /* Data persistency */
-            localStorage.setItem("user", JSON.stringify(state.user));
-        },
         logoutUser: (state) => {
             state.isLoggedIn = false;
             state.user = {};
@@ -114,6 +88,36 @@ export default createStore({
         },
     },
     actions: {
+        async editUser(context, data) {
+            /* filter empty fields from user */
+            const filteredUser = Object.keys(data.modified).reduce(
+                (acc, key) => {
+                    if (data.modified[key]) {
+                        acc[key] = data.modified[key];
+                    }
+                    return acc;
+                },
+                {}
+            );
+
+            data.original = {
+                ...data.original,
+                ...filteredUser,
+            };
+
+            fetch(`http://localhost:3000/users/${data.original.id}`, {
+                method: "PATCH",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data.original),
+            });
+
+            /* Updates the name across the application */
+            context.state.user = data.original;
+
+            localStorage.setItem("user", JSON.stringify(data.original));
+        },
         async editProduct(context, data) {
             /* filter empty fields from user */
             const filteredProduct = Object.keys(data.modified).reduce(

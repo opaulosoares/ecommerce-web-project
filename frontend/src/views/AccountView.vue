@@ -405,7 +405,14 @@ export default {
     },
     methods: {
         handleEdit() {
-            this.$store.commit("editUser", this.formState);
+            this.$store
+                .dispatch("editUser", {
+                    original: this.$store.state.user,
+                    modified: this.formState,
+                })
+                .then(() => {
+                    message.success("Successfully updated your account");
+                });
         },
         logoutUser() {
             this.$store.commit("logoutUser");

@@ -1,7 +1,6 @@
 {
   "products": [
     {
-      "id": 1,
       "name": "Purina Pro Plan High Protein Dry Dog Food, 18 lbs",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_106/1202006-center-1",
       "description": "Description",
@@ -13,7 +12,6 @@
       "onStock": 100
     },
     {
-      "id": 2,
       "name": "Purina Pro Plan With Probiotics, High Protein LiveClear Chicken & Rice Formula Dry Cat Food, 16 lbs.",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3129854-center-1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -25,7 +23,6 @@
       "onStock": 100
     },
     {
-      "id": 3,
       "name": "ORIJEN Grain-Free Puppy Recipe with Poultry & Fish Pate Premium Wet Dog Food, 12.8 oz., Case of 12",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3347851-center-1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -37,7 +34,6 @@
       "onStock": 250
     },
     {
-      "id": 4,
       "name": "The Honest Kitchen Grain Free Minced Turkey, Chicken & Duck Recipe in a Bone Broth Gravy Wet Cat Food, 5.5 oz., Case of 12",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3420537-center-1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -49,7 +45,6 @@
       "onStock": 100
     },
     {
-      "id": 5,
       "name": "JustFoodForDogs Daily Diets Chicken & White Rice Frozen Dog Food, 18 oz.",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/l_best-seller-badge,fl_relative,w_0.47,g_north_west,e_sharpen/2936179-center-10",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -61,7 +56,6 @@
       "onStock": 250
     },
     {
-      "id": 6,
       "name": "Instinct® Raw Kitten Frozen Cat Food - Cage Free, Chicken",
       "image": "https://s7d2.scene7.com/is/image/PetSmart/5306821?$sclp-prd-main_large$",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -73,7 +67,6 @@
       "onStock": 250
     },
     {
-      "id": 7,
       "name": "Purina Pro Plan with Probiotics Bright Mind Chicken & Rice Formula Senior Adult 7+ Dry Dog Food, 30 lbs.",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/2394875-center-1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -85,7 +78,6 @@
       "onStock": 250
     },
     {
-      "id": 8,
       "name": "Solid Gold Indigo Moon High Protein with Chicken & Eggs Holistic Grain Free Dry Cat Food with Superfoods, 12 lbs",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/2374583-center-1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -97,7 +89,6 @@
       "onStock": 250
     },
     {
-      "id": 9,
       "name": "Wet Noses Wag Soup Turkey and Pumpkin Wet Dog Food, 15 oz.",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/2991240-center-1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -109,7 +100,6 @@
       "onStock": 250
     },
     {
-      "id": 10,
       "name": "Royal Canin Adult Cat Instinctive Chunks in Gravy Wet Cat Food Pouch, 3 oz., Case of 12",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/2903641-center-2",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -121,7 +111,6 @@
       "onStock": 250
     },
     {
-      "id": 11,
       "name": "Hill's Natural Soft Savory Dog Treats with Peanut Butter & Banana, 8 oz., Bag",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/2331858-center-1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -133,7 +122,6 @@
       "onStock": 250
     },
     {
-      "id": 12,
       "name": "Feline Greenies Pill Pockets Chicken Flavor Natural Soft Cat Treats, 3 oz.",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3108105-center-1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -145,7 +133,6 @@
       "onStock": 250
     },
     {
-      "id": 13,
       "name": "WholeHearted Grain Free Soft and Chewy Bacon Recipe Dog Stick Treats, 16 oz",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_106/2924451-center-1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -157,7 +144,6 @@
       "onStock": 250
     },
     {
-      "id": 14,
       "name": "True Chews Chewy Duck Recipe Cat Treat, 3 oz.",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3024850-center-1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -169,7 +155,6 @@
       "onStock": 250
     },
     {
-      "id": 15,
       "name": "Nylabone Nutri Dent Limited Ingredients Medium Filet Mignon Dental Chews, 2.3 lb., Pack of 40",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto:best,dpr_2.0,w_106/2785358-centre-1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -181,7 +166,6 @@
       "onStock": 250
     },
     {
-      "id": 16,
       "name": "Emerald Pet Feline Dental Treat Chicken for Cats, 3 oz.",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/2858861_center_1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -193,7 +177,6 @@
       "onStock": 250
     },
     {
-      "id": 17,
       "name": "Dogswell Bacon Flavor Hip & Joint Soft & Chewy Dog Treats, 14 oz.",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3400288-center-1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -205,7 +188,6 @@
       "onStock": 250
     },
     {
-      "id": 18,
       "name": "Purina Friskies Party Mix Natural Yums Catnip Flavor Cat Treats, 6 oz.",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3167551-center-1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -217,7 +199,6 @@
       "onStock": 250
     },
     {
-      "id": 19,
       "name": "KONG Bites Chicken Chew Toy for Dogs, 5 oz.",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3181257-center-1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -229,7 +210,6 @@
       "onStock": 250
     },
     {
-      "id": 20,
       "name": "Cat treat",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/2215566-center-1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -241,7 +221,6 @@
       "onStock": 250
     },
     {
-      "id": 21,
       "name": "Reddy Yellow Flotation Dog Vest, X-Small",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3439836-center-10",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -253,7 +232,6 @@
       "onStock": 250
     },
     {
-      "id": 22,
       "name": "Long Dog Clothing Co. Hoodie for Dogs, X-Small",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3529452-center-1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -265,7 +243,6 @@
       "onStock": 250
     },
     {
-      "id": 23,
       "name": "YOULY Supreme Ruler Cat Hoodie",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3522040-center-6",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -277,7 +254,6 @@
       "onStock": 250
     },
     {
-      "id": 24,
       "name": "EveryYay Snooze Fest Cream Calming Donut Bed for Dogs, 18 L X 18 W",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3475511-center-7",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -289,7 +265,6 @@
       "onStock": 250
     },
     {
-      "id": 25,
       "name": "YOULY Party Animal Cat Tee, Small/Medium",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3353178-center-5",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -301,7 +276,6 @@
       "onStock": 250
     },
     {
-      "id": 26,
       "name": "Club Nine Pets Silver Metro Orthopedic Dog Bed, 40 L X 24 W",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3356993-center-1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -313,7 +287,6 @@
       "onStock": 250
     },
     {
-      "id": 27,
       "name": "EveryYay Dreamland Floral Round Cat Bed",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3330435-center-1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -325,7 +298,6 @@
       "onStock": 250
     },
     {
-      "id": 28,
       "name": "EveryYay Gray Snooze Fest Faux Fur Cat Bed, 20 L X 18 W X 7 H",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3287852-center-10",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -337,7 +309,6 @@
       "onStock": 250
     },
     {
-      "id": 29,
       "name": "PetSafe Healthy Pet Simply Feed, Automatic Dog and Cat Feeder, 24 Cups",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/2466146-center-1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -349,7 +320,6 @@
       "onStock": 250
     },
     {
-      "id": 30,
       "name": "EveryYay Dining In Stainless-Steel with Marble-Printed Melamine Base Dog Bowl, 1 Cup",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3162785-center-1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -361,7 +331,6 @@
       "onStock": 250
     },
     {
-      "id": 31,
       "name": "Petique Blue Eco-Friendly PLA Pet Dish Bowl for Cats",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3247121-center-1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -373,7 +342,6 @@
       "onStock": 250
     },
     {
-      "id": 32,
       "name": "EveryYay Dining In Ivory Floral-Shaped Cat Bowl, 0.875 Cups",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3335279-center-1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -385,7 +353,6 @@
       "onStock": 250
     },
     {
-      "id": 33,
       "name": "Multipet International Jumbo Rainbow Lamb Chop Plush Dog Toy, XX-Large",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3548725-center-1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -397,7 +364,6 @@
       "onStock": 250
     },
     {
-      "id": 34,
       "name": "Leaps & Bounds Glow Flyer Splatter Dog Toy, Medium",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3494018-center-1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -409,7 +375,6 @@
       "onStock": 250
     },
     {
-      "id": 35,
       "name": "PetSafe Laser Tail Automatic Laser Light Cat Toy",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/2924573-center-2",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -421,7 +386,6 @@
       "onStock": 250
     },
     {
-      "id": 36,
       "name": "Leaps & Bounds EZ Snap Crinkle Ball Assorted Cat Teaser, 34 Length",
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/l_sale-badge,fl_relative,w_0.25,g_north_west,e_sharpen/2304278-center-1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
@@ -474,7 +438,6 @@
   ],
   "users": [
     {
-      "id": 0,
       "name": "admin",
       "password": "admin",
       "email": "admin@admin.com",
@@ -486,7 +449,6 @@
       "role": "Admin"
     },
     {
-      "id": 1,
       "name": "Johnny",
       "email": "john@email.com",
       "password": "123",
@@ -512,15 +474,13 @@
       "cardCVV": "123",
       "city": "234234",
       "state": "VA",
-      "role": "Costumer",
-      "id": 2
+      "role": "Costumer"
     }
   ],
   "orders": [
     {
-      "user_id": 2,
-      "products": {
-        "5": {
+      "products": [
+        {
           "id": 5,
           "name": "JustFoodForDogs Daily Diets Chicken & White Rice Frozen Dog Food, 18 oz.",
           "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/l_best-seller-badge,fl_relative,w_0.47,g_north_west,e_sharpen/2936179-center-10",
@@ -533,7 +493,7 @@
           "onStock": 250,
           "amount": 3
         },
-        "25": {
+        {
           "id": 25,
           "name": "YOULY Party Animal Cat Tee, Small/Medium",
           "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3353178-center-5",
@@ -546,7 +506,7 @@
           "onStock": 250,
           "amount": 3
         },
-        "32": {
+        {
           "id": 32,
           "name": "EveryYay Dining In Ivory Floral-Shaped Cat Bowl, 0.875 Cups",
           "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3335279-center-1",
@@ -559,16 +519,14 @@
           "onStock": 250,
           "amount": 3
         }
-      },
+      ],
       "subtotal": 15,
       "shipping": 1.9305019305019306,
-      "total": 16.93050193050193,
-      "id": 1
+      "total": 16.93050193050193
     },
     {
-      "user_id": 2,
-      "products": {
-        "25": {
+      "products": [
+        {
           "id": 25,
           "name": "YOULY Party Animal Cat Tee, Small/Medium",
           "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3353178-center-5",
@@ -581,7 +539,7 @@
           "onStock": 250,
           "amount": 1
         },
-        "33": {
+        {
           "id": 33,
           "name": "Multipet International Jumbo Rainbow Lamb Chop Plush Dog Toy, XX-Large",
           "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3548725-center-1",
@@ -594,16 +552,14 @@
           "onStock": 250,
           "amount": 1
         }
-      },
+      ],
       "subtotal": 4,
       "shipping": 0.5148005148005148,
-      "total": 4.514800514800514,
-      "id": 2
+      "total": 4.514800514800514
     },
     {
-      "user_id": 2,
-      "products": {
-        "21": {
+      "products": [
+        {
           "id": 21,
           "name": "Reddy Yellow Flotation Dog Vest, X-Small",
           "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3439836-center-10",
@@ -616,16 +572,14 @@
           "onStock": 250,
           "amount": 1
         }
-      },
+      ],
       "subtotal": 10,
       "shipping": 1.287001287001287,
-      "total": 11.287001287001287,
-      "id": 3
+      "total": 11.287001287001287
     },
     {
-      "user_id": 2,
-      "products": {
-        "32": {
+      "products": [
+        {
           "id": 32,
           "name": "EveryYay Dining In Ivory Floral-Shaped Cat Bowl, 0.875 Cups",
           "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3335279-center-1",
@@ -638,16 +592,14 @@
           "onStock": 250,
           "amount": 1
         }
-      },
+      ],
       "subtotal": 1,
       "shipping": 0.1287001287001287,
-      "total": 1.1287001287001286,
-      "id": 4
+      "total": 1.1287001287001286
     },
     {
-      "user_id": 1,
-      "products": {
-        "32": {
+      "products": [
+        {
           "id": 32,
           "name": "EveryYay Dining In Ivory Floral-Shaped Cat Bowl, 0.875 Cups",
           "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3335279-center-1",
@@ -660,11 +612,10 @@
           "onStock": 250,
           "amount": 3
         }
-      },
+      ],
       "subtotal": 3,
       "shipping": 0.3861003861003861,
-      "total": 3.386100386100386,
-      "id": 5
+      "total": 3.386100386100386
     }
   ]
 }

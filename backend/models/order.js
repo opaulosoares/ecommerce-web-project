@@ -1,12 +1,6 @@
 const mongoose = require("mongoose");
 
 const productSchema = new mongoose.Schema({
-    id: {
-        type: mongoose.Schema.Types.ObjectId,
-        index: true,
-        required: true,
-        auto: true,
-    },
     name: {
         type: String,
         required: true,
@@ -38,8 +32,35 @@ const productSchema = new mongoose.Schema({
     onStock: {
         type: Number,
         required: true,
+    },
+    amount: {
+        type: Number,
+        required: true
     }
 })
 
-const Order = mongoose.model("Order", schema);
+const orderSchema = new mongoose.Schema({
+    user_id: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+    },
+    products: {
+        type: [productSchema],
+        required: true,
+    }, // TO DO: Ver como replicar JSON Server nesse campo
+    subtotal: {
+        type: Number,
+        required: true,
+    },
+    shipping: {
+        type: Number,
+        required: true,
+    },
+    total: {
+        type: Number,
+        required: true
+    }
+})
+
+const Order = mongoose.model("Order", orderSchema);
 module.exports = Order;

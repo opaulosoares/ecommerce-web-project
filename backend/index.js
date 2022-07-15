@@ -8,6 +8,7 @@ const productsRouter = require("./routers/products");
 const productRouter = require("./routers/product");
 const usersRouter = require("./routers/users");
 const categoriesRouter = require("./routers/categories");
+const ordersRouter = require("./routers/orders");
 
 // Connecting to MongoDB
 mongoose.connect("mongodb://localhost:27017/fluffshop")
@@ -25,6 +26,7 @@ app.use("/products", productsRouter);
 app.use("/product", productRouter);
 app.use("/users", usersRouter);
 app.use("/categories", categoriesRouter);
+app.use("/orders", ordersRouter);
 
 
 // Start app

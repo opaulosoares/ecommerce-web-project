@@ -3,7 +3,7 @@
 ## Instantiate Mongodb 
 
 ```shell
-mongodb mongodb://localhost:27017/fluffshop
+mongosh mongodb://localhost:27017/fluffshop
 ```
 
 Then quit the MongoDB shell.

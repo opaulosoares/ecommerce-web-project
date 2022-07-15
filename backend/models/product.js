@@ -21,6 +21,10 @@ const schema = new mongoose.Schema({
         type: String,
         required: true
     },
+    subcategory: {
+        type: String,
+        required: true
+    },
     petAge: {
         type: String,
         required: true,

@@ -50,7 +50,7 @@ router.patch('/:id', async(req, res) => {
     let targetProduct = await Product.findByIdAndUpdate(
         req.params.id,
         {...req.body},
-        {new: true}
+        {returnDocument: "after"} // returns the updated Product
     ).exec();
 
     if (targetProduct === null)

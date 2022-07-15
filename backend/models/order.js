@@ -1,6 +1,11 @@
 const mongoose = require("mongoose");
 
 const productSchema = new mongoose.Schema({
+    product_id: {
+        type: mongoose.Schema.Types.ObjectID,
+        ref: "Product",
+        required: true
+    },
     name: {
         type: String,
         required: true,
@@ -10,26 +15,7 @@ const productSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    description: {
-        type: String
-    },
-    petSpecie: {
-        type: String,
-        required: true,
-    },
-    category: {
-        type: String,
-        required: true
-    },
-    petAge: {
-        type: String,
-        required: true,
-    },
     price: {
-        type: Number,
-        required: true,
-    },
-    onStock: {
         type: Number,
         required: true,
     },
@@ -42,12 +28,13 @@ const productSchema = new mongoose.Schema({
 const orderSchema = new mongoose.Schema({
     user_id: {
         type: mongoose.Schema.Types.ObjectId,
-        required: true,
+        ref: "User",
+        required: true
     },
     products: {
         type: [productSchema],
         required: true,
-    }, // TO DO: Ver como replicar JSON Server nesse campo
+    },
     subtotal: {
         type: Number,
         required: true,

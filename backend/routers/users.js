@@ -27,7 +27,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // Get user by email
-router.get('?email=:email', async (req, res) => {
+router.get('/?email=:email', async (req, res) => {
     const targetUser = await User.find({ email: req.params.email }).exec();
     if (targetUser === null)
         return res.status(404).send({ error: USER_NOT_FOUND });

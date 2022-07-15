@@ -481,42 +481,21 @@
     {
       "products": [
         {
-          "id": 5,
           "name": "JustFoodForDogs Daily Diets Chicken & White Rice Frozen Dog Food, 18 oz.",
           "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/l_best-seller-badge,fl_relative,w_0.47,g_north_west,e_sharpen/2936179-center-10",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
-          "petSpecie": "Dog",
-          "category": "foods",
-          "petAge": "adult",
-          "subcategory": "Frozen",
           "price": 2,
-          "onStock": 250,
           "amount": 3
         },
         {
-          "id": 25,
           "name": "YOULY Party Animal Cat Tee, Small/Medium",
           "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3353178-center-5",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
-          "petSpecie": "Dog",
-          "category": "supplies",
-          "petAge": "adult",
-          "subcategory": "Beds",
           "price": 2,
-          "onStock": 250,
           "amount": 3
         },
         {
-          "id": 32,
           "name": "EveryYay Dining In Ivory Floral-Shaped Cat Bowl, 0.875 Cups",
           "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3335279-center-1",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
-          "petSpecie": "Cat",
-          "category": "supplies",
-          "petAge": "adult",
-          "subcategory": "Bowls",
           "price": 1,
-          "onStock": 250,
           "amount": 3
         }
       ],
@@ -527,29 +506,15 @@
     {
       "products": [
         {
-          "id": 25,
           "name": "YOULY Party Animal Cat Tee, Small/Medium",
           "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3353178-center-5",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
-          "petSpecie": "Dog",
-          "category": "supplies",
-          "petAge": "adult",
-          "subcategory": "Beds",
           "price": 2,
-          "onStock": 250,
           "amount": 1
         },
         {
-          "id": 33,
           "name": "Multipet International Jumbo Rainbow Lamb Chop Plush Dog Toy, XX-Large",
           "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3548725-center-1",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
-          "petSpecie": "Dog",
-          "category": "supplies",
-          "petAge": "adult",
-          "subcategory": "Toys",
           "price": 2,
-          "onStock": 250,
           "amount": 1
         }
       ],
@@ -560,16 +525,9 @@
     {
       "products": [
         {
-          "id": 21,
           "name": "Reddy Yellow Flotation Dog Vest, X-Small",
           "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3439836-center-10",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
-          "petSpecie": "Dog",
-          "category": "supplies",
-          "petAge": "adult",
-          "subcategory": "Clothes",
           "price": 10,
-          "onStock": 250,
           "amount": 1
         }
       ],
@@ -580,16 +538,9 @@
     {
       "products": [
         {
-          "id": 32,
           "name": "EveryYay Dining In Ivory Floral-Shaped Cat Bowl, 0.875 Cups",
           "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3335279-center-1",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
-          "petSpecie": "Cat",
-          "category": "supplies",
-          "petAge": "adult",
-          "subcategory": "Bowls",
           "price": 1,
-          "onStock": 250,
           "amount": 1
         }
       ],
@@ -600,16 +551,9 @@
     {
       "products": [
         {
-          "id": 32,
           "name": "EveryYay Dining In Ivory Floral-Shaped Cat Bowl, 0.875 Cups",
           "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto,w_190/dpr_auto/3335279-center-1",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat fermentum nisl, id semper dui ornare ac. Sed placerat velit a magna consectetur, tincidunt venenatis purus facilisis. Pellentesque blandit mattis elit. Nullam gravida elit vel turpis rhoncus scelerisque. Sed tempor id enim ac facilisis. Nunc lectus ante, varius sed dolor non, egestas interdum sapien.",
-          "petSpecie": "Cat",
-          "category": "supplies",
-          "petAge": "adult",
-          "subcategory": "Bowls",
           "price": 1,
-          "onStock": 250,
           "amount": 3
         }
       ],

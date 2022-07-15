@@ -12,6 +12,10 @@ async function howIsDatabase(schema) {
     console.log(result);
 }
 
+async function findProductByName(product_name) {
+    return await Product.findOne({name: product_name}).exec();
+}
+
 async function populateDB() {
     mongoose.connect("mongodb://localhost:27017/fluffshop")
         .then(() => console.log('Populando a base de dados ...'))
@@ -38,6 +42,13 @@ async function populateDB() {
 
     for (order of data["orders"]) {
         order.user_id = user_id;
+        
+        // Getting ID of the product
+        for (order_product of order["products"]) {
+            product = await findProductByName(order_product.name);
+            order_product.product_id = product._id;
+        }
+
         await new Order(order).save();
     }
 

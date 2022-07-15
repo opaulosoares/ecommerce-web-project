@@ -36,36 +36,14 @@ import { ShoppingCartOutlined } from "@ant-design/icons-vue";
 export default {
     name: "ProductCard",
     props: {
-        name: {
-            type: String,
-            required: true,
-        },
-        price: {
-            type: undefined,
-            required: true,
-        },
-        image: {
-            type: String,
-        },
-        description: {
-            type: String,
-        },
-        productId: {
-            type: Number,
-            required: true,
-        },
-        category: {
-            type: String,
-            required: true,
-        },
-        subcategory: {
-            type: String,
-            required: true,
-        },
-        specie: {
-            type: String,
-            required: true,
-        },
+        name: "",
+        price: "",
+        image: "",
+        description: "",
+        productId: "",
+        category: "",
+        subcategory: "",
+        specie: "",
     },
     methods: {
         info() {

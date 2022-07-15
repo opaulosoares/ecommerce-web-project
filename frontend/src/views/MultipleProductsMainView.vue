@@ -50,11 +50,11 @@
                                         <!-- Product list rendering -->
                                         <ProductCard
                                             v-for="product in filteredProducts"
-                                            :key="product.id"
+                                            :key="product._id"
                                             :name="product.name"
                                             :price="product.price"
                                             :image="product.image"
-                                            :productId="product.id"
+                                            :productId="product._id"
                                             :category="category"
                                             :subcategory="product.subcategory"
                                             :specie="product.petSpecie"

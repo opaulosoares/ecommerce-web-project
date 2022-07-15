@@ -411,11 +411,15 @@
                         class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
                     >
                         <Card v-for="item in productList" :key="item.id">
-                            <div class="grid grid-cols-1 gap-8 xl:grid-cols-3">
-                                <img
-                                    :src="item.image"
-                                    class="object-contain w-full"
-                                />
+                            <div
+                                class="grid grid-cols-2 gap-4 p-8 rounded bg-slate-100"
+                            >
+                                <div>
+                                    <img
+                                        :src="item.image"
+                                        class="object-contain w-full"
+                                    />
+                                </div>
 
                                 <div class="flex flex-col">
                                     <h1 class="fix-text">{{ item.name }}</h1>
@@ -427,16 +431,18 @@
 
                                     <div>
                                         <strong> ID: </strong>
-                                        <Tag color="green"> {{ item.id }}</Tag>
+                                        <Tag color="green">
+                                            {{ item._id.slice(10, 25) }}</Tag
+                                        >
                                     </div>
                                 </div>
-                                <div class="flex gap-2">
-                                    <Button @click="handleEditProduct(item.id)"
+                                <div class="flex gap-4">
+                                    <Button @click="handleEditProduct(item._id)"
                                         >Edit</Button
                                     >
                                     <Button
                                         type="danger"
-                                        @click="delete productList[item.id]"
+                                        @click="handleDeleteProduct(item._id)"
                                         >Remove</Button
                                     >
                                 </div>
@@ -586,6 +592,9 @@ export default {
         };
     },
     methods: {
+        handleDeleteProduct(id) {
+            delete this.productList[id];
+        },
         handleEditUser(id) {
             this.editUserID = id;
             this.openEditUser = true;
@@ -649,7 +658,7 @@ export default {
                     if (!this.searchProductID) {
                         return true;
                     }
-                    return product.id.toString() === this.searchProductID;
+                    return product._id.includes(this.searchProductID);
                 });
         },
         updateUserCards() {

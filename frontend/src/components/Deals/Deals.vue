@@ -19,11 +19,11 @@
                                         <!-- Product list rendering -->
                                         <ProductCard
                                             v-for="product in sortedProducts"
-                                            :key="product.id"
+                                            :key="product._id"
                                             :name="product.name"
                                             :price="product.price"
                                             :image="product.image"
-                                            :productId="product.id"
+                                            :productId="product._id"
                                             :category="product.category"
                                             :subcategory="product.subcategory"
                                             :specie="product.petSpecie"

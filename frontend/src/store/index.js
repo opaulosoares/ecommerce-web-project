@@ -46,7 +46,7 @@ export default createStore({
         setAdmin: (state, admin) => (state.admin = admin),
         loggedIn: (state) => (state.isLoggedIn = true),
         adminLoggedIn: (state) => (state.isAdminLoggedIn = true),
-        addProduct: (state, product) => (state.products[product.id] = product),
+        addProduct: (state, product) => (state.products[product._id] = product),
         addUser: (state, user) => (state.users[user.id] = user),
         addCategoryData: (state, data) => (state.categoryData[data.id] = data),
         addToCart: (state, product) => {
@@ -162,6 +162,8 @@ export default createStore({
             let products = await fetch(`http://localhost:3000/products`);
 
             let data = await products.json();
+
+            console.log(data);
 
             await new Promise((resolve) => setTimeout(resolve, 1000));
 

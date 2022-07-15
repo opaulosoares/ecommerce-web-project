@@ -19,7 +19,7 @@ router.get('/:id', async(req, res) => {
     return res.status(200).send(targetProduct);
 });
 
-// Deletes one Product by ID
+// Delete one Product by ID
 router.delete('/:id', async(req, res) => {
     if (!mongoose.isValidObjectId(req.params.id))
         return res.status(400).send({error: INVALID_ID});
@@ -29,6 +29,34 @@ router.delete('/:id', async(req, res) => {
         return res.status(404).send({error: PRODUCT_NOT_FOUND});
     
     return res.status(200).send();
+});
+
+// Create Product
+router.post('/', async(req, res) => {
+    try {
+        const newProduct = new Product({...req.body});
+        await newProduct.save();
+        return res.status(200).send(newProduct);
+    } catch(e) {
+        return res.status(400).send({error: e});
+    }
+});
+
+// Edit Product by ID
+router.patch('/:id', async(req, res) => {
+    if (!mongoose.isValidObjectId(req.params.id))
+        return res.status(400).send({error: INVALID_ID});
+    
+    let targetProduct = await Product.findByIdAndUpdate(
+        req.params.id,
+        {...req.body},
+        {new: true}
+    ).exec();
+
+    if (targetProduct === null)
+        return res.status(404).send({error: PRODUCT_NOT_FOUND});
+    
+    return res.status(200).send(targetProduct);
 });
 
 module.exports = router;

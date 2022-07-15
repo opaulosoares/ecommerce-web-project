@@ -14,3 +14,11 @@ Then quit the MongoDB shell.
 npm install
 npm run populate
 ```
+
+## Run API
+
+```shell
+npm start
+```
+
+API wil be running at `http://localhost:3000`.

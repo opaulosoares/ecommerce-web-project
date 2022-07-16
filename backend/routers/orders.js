@@ -11,7 +11,7 @@ const PRODUCT_NOT_FOUND = "Order not found";
 // Get all Orders (`?user=user_id` query can be supplied)
 router.get('/', async(req, res) => {
     if (req.query.user === undefined || req.query.user === "") {
-        res.status(200).send(
+        return res.status(200).send(
             await Order.find({})
         );
     } else {

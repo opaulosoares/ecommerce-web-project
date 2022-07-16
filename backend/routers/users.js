@@ -7,7 +7,8 @@ const router = express.Router();
 const INVALID_ID = "Invalid UserID";
 const USER_NOT_FOUND = "User not found";
 
-
+// Get all users
+// or Get a specific user by email (user query: users?email=user_email)
 router.get('/', async(req, res) => {
     users = await User.find({})
 

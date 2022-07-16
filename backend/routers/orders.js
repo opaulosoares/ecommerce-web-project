@@ -8,7 +8,8 @@ const router = express.Router();
 const INVALID_ID = "Invalid ObjectID";
 const ORDER_NOT_FOUND = "Order(s) not found";
 
-// Get all Orders (`?user=user_id` query can be supplied)
+// Get all orders
+// or Get a specific set of orders made by a user (user query: orders?user=user_id)
 router.get('/', async(req, res) => {
     orders = await Order.find({})
     if (req.query.user !== undefined) {

@@ -8,11 +8,21 @@ const router = express.Router();
 const INVALID_ID = "Invalid ObjectID";
 const PRODUCT_NOT_FOUND = "Order not found";
 
-// Get all Orders
+// Get all Orders (`?user=user_id` query can be supplied)
 router.get('/', async(req, res) => {
-    res.status(200).send(
-        await Order.find({})
-    )
+    if (req.query.user === undefined || req.query.user === "") {
+        res.status(200).send(
+            await Order.find({})
+        );
+    } else {
+        try {
+            return res.status(200).send(
+                await Order.find({user_id: req.query.user})
+            );
+        } catch(e) {
+            return res.status(404).send({error: e});
+        }
+    } 
 });
 
 // Create new order

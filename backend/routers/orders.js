@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 const router = express.Router();
 
 const INVALID_ID = "Invalid ObjectID";
-const PRODUCT_NOT_FOUND = "Order not found";
+const ORDER_NOT_FOUND = "Order not found";
 
 // Get all Orders (`?user=user_id` query can be supplied)
 router.get('/', async(req, res) => {
@@ -51,9 +51,21 @@ router.get('/:id', async(req, res) => {
     
     const targetOrder = await Order.findById(req.params.id).exec();
     if (targetOrder === null)
-        return res.status(404).send({error: PRODUCT_NOT_FOUND});
+        return res.status(404).send({error: ORDER_NOT_FOUND});
     
     return res.status(200).send(targetOrder);
+});
+
+// Delete a Order by ID
+router.delete('/:id', async (req, res) => {
+    if (!mongoose.isValidObjectId(req.params.id))
+        return res.status(400).send({ error: INVALID_ID });
+
+    const targetOrder = await Order.findByIdAndDelete(req.params.id).exec();
+    if (targetOrder === null)
+        return res.status(404).send({ error: ORDER_NOT_FOUND });
+
+    return res.status(200).send();
 });
 
 module.exports = router;

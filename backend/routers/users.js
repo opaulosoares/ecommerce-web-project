@@ -7,37 +7,19 @@ const router = express.Router();
 const INVALID_ID = "Invalid UserID";
 const USER_NOT_FOUND = "User not found";
 
-// Get all users
-// router.get('/', async(req, res) => {
-//     res.status(200).send(
-//         await User.find({})
-//     )
-// });
-
-// Get user by email
-// router.get('?email=:email', async (req, res) => {
-//     console.log(req.params.email);
-//     const targetUser = await User.find({ email: req.params.email }).exec();
-//     if (targetUser === null)
-//         return res.status(404).send({ error: USER_NOT_FOUND });
-
-//     return res.status(200).send(targetUser);
-// })
 
 router.get('/', async(req, res) => {
-    if (req.query.email === undefined || req.query.email === "") {
-        return res.status(200).send(
-            await User.find({})
-        );
+    users = await User.find({})
+
+    if (req.query.email !== undefined) {
+        users = users.filter(el => el.email === req.query.email)[0]
+    }
+
+    if (users.length === 0) {
+        return res.status(404).send({error: USER_NOT_FOUND});
     } else {
-        try {
-            return res.status(200).send(
-                await User.findOne({email: req.query.email})
-            );
-        } catch(e) {
-            return res.status(404).send({error: e});
-        }
-    } 
+        return res.status(200).send(users);
+    }
 });
 
 // Get user by ID

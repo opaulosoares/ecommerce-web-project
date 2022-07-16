@@ -6,23 +6,20 @@ const mongoose = require("mongoose");
 const router = express.Router();
 
 const INVALID_ID = "Invalid ObjectID";
-const ORDER_NOT_FOUND = "Order not found";
+const ORDER_NOT_FOUND = "Order(s) not found";
 
 // Get all Orders (`?user=user_id` query can be supplied)
 router.get('/', async(req, res) => {
-    if (req.query.user === undefined || req.query.user === "") {
-        return res.status(200).send(
-            await Order.find({})
-        );
+    orders = await Order.find({})
+    if (req.query.user !== undefined) {
+        orders = orders.filter(el => el.user_id == req.query.user)
+    }
+
+    if (orders.length === 0) {
+        return res.status(404).send({error: ORDER_NOT_FOUND});
     } else {
-        try {
-            return res.status(200).send(
-                await Order.find({user_id: req.query.user})
-            );
-        } catch(e) {
-            return res.status(404).send({error: e});
-        }
-    } 
+        return res.status(200).send(orders);
+    }
 });
 
 // Create new order

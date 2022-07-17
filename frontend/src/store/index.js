@@ -48,7 +48,7 @@ export default createStore({
         adminLoggedIn: (state) => (state.isAdminLoggedIn = true),
         addProduct: (state, product) => (state.products[product._id] = product),
         addUser: (state, user) => (state.users[user._id] = user),
-        addCategoryData: (state, data) => (state.categoryData[data._id] = data),
+        addCategoryData: (state, data) => (state.categoryData[data.id] = data),
         addToCart: (state, product) => {
             state.cart[product._id] = {
                 ...product,

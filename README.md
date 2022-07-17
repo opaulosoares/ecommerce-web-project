@@ -103,7 +103,7 @@ Protótipo em HTML + CSS
 
 #### Funcionalidade extra
 
--   O sistema permite que o usuário consulte para qual tipo de _pet_ aquele produto é recomendado. O tipo de _pet_ pode ser "Qualquer pet", "Cachorro pequeno", "Cachorro médio", "Cachorro grande", "Gato pequeno", "Gato médio", "Gato grande". Um produto pode ter mais de um tipo de _pet_ recomendado simultaneamente.
+-   O sistema é capaz de filtrar produtos com base no tipo do produto e no animal destinado.
 
 #### Requisitos não-funcionais
 

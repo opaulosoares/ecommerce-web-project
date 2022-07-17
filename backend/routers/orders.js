@@ -51,7 +51,7 @@ router.post('/', async (req, res) => {
 
         return res.status(200).send(order);
     } catch (e) {
-        return res.status(400).send({error: e});
+        return res.status(400).send({error: e.message});
     }
 });
 

@@ -38,7 +38,7 @@ router.post('/', async(req, res) => {
         await newProduct.save();
         return res.status(200).send(newProduct);
     } catch(e) {
-        return res.status(400).send({error: e});
+        return res.status(400).send({error: e.message});
     }
 });
 
@@ -59,7 +59,7 @@ router.patch('/:id', async(req, res) => {
         
         return res.status(200).send(targetProduct);
     } catch (e) {
-        return res.status(400).send({error: e});
+        return res.status(400).send({error: e.message});
     }
 });
 

@@ -55,7 +55,7 @@ router.post('/', async(req, res) => {
         return res.status(200).send(newUser);
     }
     catch (e) {
-        return res.status(400).send({ error: e });
+        return res.status(400).send({ error: e.message });
     }
 });  
 
@@ -76,7 +76,7 @@ router.patch('/:id', async (req, res) => {
 
         return res.status(200).send(targetUser);
     } catch (e) {
-        return res.status(400).send({error: e});
+        return res.status(400).send({error: e.message});
     }
 });
 

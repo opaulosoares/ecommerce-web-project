@@ -105,7 +105,7 @@ export default createStore({
                 ...filteredUser,
             };
 
-            fetch(`http://localhost:3000/users/${data.original.id}`, {
+            fetch(`http://localhost:3000/users/${data.original._id}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json",
@@ -115,6 +115,7 @@ export default createStore({
 
             /* Updates the name across the application */
             context.state.user = data.original;
+            context.state.users[data.original._id] = data.original;
 
             localStorage.setItem("user", JSON.stringify(data.original));
         },
@@ -160,6 +161,13 @@ export default createStore({
             });
 
             delete context.state.products[productId];
+        },
+        async deleteUser(context, userId) {
+            fetch(`http://localhost:3000/users/${userId}`, {
+                method: "DELETE",
+            });
+
+            delete context.state.users[userId];
         },
         async registerUser({ commit }, user) {
             user.role = "Costumer";

@@ -306,6 +306,7 @@
         </Form>
     </Modal>
 
+    <!-- Edit User -->
     <Modal
         v-model:visible="openEditUser"
         ok-text=" "
@@ -314,57 +315,84 @@
         width="50%"
         centered
     >
-        <Form :model="formStateUser">
+        <Form :model="formStateUser" @finish="handleEditUserSubmit">
             <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-                <FormItem name="email" class="w-full">
+                <FormItem name="name" class="w-full">
                     <p class="flex text-zinc-400">Name</p>
-                    <Input v-model:value="formStateUser.name" type="name" />
+                    <Input
+                        v-model:value="formStateUser.name"
+                        type="name"
+                        :placeholder="this.userList[this.editUserID].name"
+                    />
                 </FormItem>
                 <FormItem name="password" class="w-full">
                     <p class="flex text-zinc-400">Password</p>
-                    <InputPassword v-model:value="formStateUser.password" />
+                    <InputPassword
+                        v-model:value="formStateUser.password"
+                        placeholder="Edit user password"
+                    />
                 </FormItem>
             </div>
 
             <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
                 <FormItem name="email" class="w-full">
                     <p class="flex text-zinc-400">Email</p>
-                    <Input v-model:value="formStateUser.email" type="email" />
+                    <Input
+                        v-model:value="formStateUser.email"
+                        type="email"
+                        :placeholder="this.userList[this.editUserID].email"
+                    />
                 </FormItem>
                 <FormItem name="address" class="w-full">
                     <p class="flex text-zinc-400">Address</p>
-                    <Input v-model:value="formStateUser.address" type="name" />
+                    <Input
+                        v-model:value="formStateUser.address"
+                        type="name"
+                        :placeholder="this.userList[this.editUserID].address"
+                    />
                 </FormItem>
             </div>
 
             <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
                 <FormItem name="city" class="w-full">
                     <p class="flex text-zinc-400">City</p>
-                    <Input v-model:value="formStateUser.city" type="name" />
+                    <Input
+                        v-model:value="formStateUser.city"
+                        type="name"
+                        :placeholder="this.userList[this.editUserID].city"
+                    />
                 </FormItem>
                 <FormItem name="state" class="w-full">
                     <p class="flex text-zinc-400">State</p>
-                    <Input v-model:value="formStateUser.state" type="name" />
+                    <Input
+                        v-model:value="formStateUser.state"
+                        type="name"
+                        :placeholder="this.userList[this.editUserID].state"
+                    />
                 </FormItem>
             </div>
 
             <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
                 <FormItem name="zip" class="w-full">
                     <p class="flex text-zinc-400">ZIP Code</p>
-                    <Input v-model:value="formStateUser.zip" type="name" />
+                    <Input
+                        v-model:value="formStateUser.zip"
+                        type="name"
+                        :placeholder="this.userList[this.editUserID].zip"
+                    />
                 </FormItem>
                 <FormItem name="Phone" class="w-full">
                     <p class="flex text-zinc-400">Phone</p>
-                    <Input v-model:value="formStateUser.phone" type="number" />
+                    <Input
+                        v-model:value="formStateUser.phone"
+                        type="number"
+                        :placeholder="this.userList[this.editUserID].phone"
+                    />
                 </FormItem>
             </div>
 
             <FormItem>
-                <Button
-                    type="primary"
-                    html-type="submit"
-                    @click="handleSubmitUser"
-                >
+                <Button type="primary" html-type="submit">
                     Confirm changes
                 </Button>
             </FormItem>
@@ -465,10 +493,12 @@
                                 <h1>Phone: {{ item.phone }}</h1>
                             </div>
                             <div class="flex self-end gap-2">
-                                <Button @click="handleEditUser">Edit</Button>
+                                <Button @click="handleEditUser(item._id)"
+                                    >Edit</Button
+                                >
                                 <Button
                                     type="danger"
-                                    @click="delete userList[item.id]"
+                                    @click="handleDeleteUser(item._id)"
                                     >Remove</Button
                                 >
                             </div>
@@ -631,6 +661,17 @@ export default {
                 },
             });
         },
+        handleDeleteUser(id) {
+            Modal.confirm({
+                title: "Are you sure delete this user?",
+                content: "This action cannot be undone",
+                okText: "Yes",
+                cancelText: "No",
+                onOk() {
+                    store.dispatch("deleteUser", id);
+                },
+            });
+        },
         handleEditUser(id) {
             this.editUserID = id;
             this.openEditUser = true;
@@ -677,6 +718,33 @@ export default {
             message.success("Product edited successfully");
 
             this.openEditProduct = false;
+        },
+        async handleEditUserSubmit() {
+            let isEmpty = true;
+
+            let form = Object.values(this.formStateUser);
+
+            for (let i = 0; i < form.length; i++) {
+                if (form[i] !== "") {
+                    isEmpty = false;
+                }
+            }
+
+            if (isEmpty) {
+                message.error("Form is empty, no changes were made");
+                return;
+            }
+
+            await this.$store.dispatch("editUser", {
+                original: this.userList[this.editUserID],
+                modified: this.formStateUser,
+            });
+
+            this.userList = this.$store.getters.users;
+
+            message.success("User edited successfully");
+
+            this.openEditUser = false;
         },
         updateProductCards() {
             this.productList = Object.values(store.getters.products)

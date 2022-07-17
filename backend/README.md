@@ -2,6 +2,14 @@
 
 ## Instantiate Mongodb 
 
+Firstly make sure to start mongodb service:
+
+```shell
+sudo service mongodb start
+```
+
+After, instantiate mongodb:
+
 ```shell
 mongosh mongodb://localhost:27017/fluffshop
 ```

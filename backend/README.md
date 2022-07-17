@@ -5,7 +5,7 @@
 Firstly make sure to start mongodb service:
 
 ```shell
-sudo service 
+sudo service mongodb start
 ```
 
 After, instantiate mongodb:

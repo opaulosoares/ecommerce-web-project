@@ -59,7 +59,7 @@ router.patch('/:id', async(req, res) => {
         
         return res.status(200).send(targetProduct);
     } catch (e) {
-        return res.status(404).send({error: e});
+        return res.status(400).send({error: e});
     }
 });
 

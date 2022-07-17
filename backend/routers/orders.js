@@ -7,6 +7,7 @@ const router = express.Router();
 
 const INVALID_ID = "Invalid ObjectID";
 const ORDER_NOT_FOUND = "Order(s) not found";
+const PRODUCT_OUT_OF_STOCK = "Product is out of stock";
 
 // Get all orders
 // or Get a specific set of orders made by a user (user query: orders?user=user_id)
@@ -26,15 +27,27 @@ router.get('/', async(req, res) => {
 // Create new order
 router.post('/', async (req, res) => {
     try {
-        const order = new Order({...req.body});
-        await order.save();
-        
+        for (product of req.body.products) {
+            // check if there is enough products on stock
+            const targetProduct = await Product.findById(product.product_id).exec();
+            if (targetProduct.onStock - product.amount < 0) {
+                return res.status(400).send({
+                    error: PRODUCT_OUT_OF_STOCK, 
+                    product: product.product_id,
+                    current_stock: targetProduct.onStock
+                });
+            }
+        }
+
         await Promise.all(req.body.products.map(
             product => Product.findByIdAndUpdate(
                 product.product_id,
-                {$inc: {onStock: - product.amount}} // Removing purchased amount from product stock
+                {$inc: {onStock: - product.amount}}, // Removing purchased amount from product stock
             )
         ));
+
+        const order = new Order({...req.body});
+        await order.save();
 
         return res.status(200).send(order);
     } catch (e) {

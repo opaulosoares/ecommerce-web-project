@@ -47,24 +47,24 @@ export default createStore({
         loggedIn: (state) => (state.isLoggedIn = true),
         adminLoggedIn: (state) => (state.isAdminLoggedIn = true),
         addProduct: (state, product) => (state.products[product._id] = product),
-        addUser: (state, user) => (state.users[user.id] = user),
-        addCategoryData: (state, data) => (state.categoryData[data.id] = data),
+        addUser: (state, user) => (state.users[user._id] = user),
+        addCategoryData: (state, data) => (state.categoryData[data._id] = data),
         addToCart: (state, product) => {
-            state.cart[product.id] = {
+            state.cart[product._id] = {
                 ...product,
-                amount: state.cart[product.id]?.amount + 1 || 1,
+                amount: state.cart[product._id]?.amount + 1 || 1,
             };
 
             /* Data persistency */
             localStorage.setItem("cart", JSON.stringify(state.cart));
         },
         removeFromCart: (state, product) => {
-            if (state.cart[product.id].amount == 1) {
-                delete state.cart[product.id];
+            if (state.cart[product._id].amount == 1) {
+                delete state.cart[product._id];
             } else {
-                state.cart[product.id] = {
+                state.cart[product._id] = {
                     ...product,
-                    amount: state.cart[product.id]?.amount - 1 || 0,
+                    amount: state.cart[product._id]?.amount - 1 || 0,
                 };
             }
 
@@ -72,7 +72,7 @@ export default createStore({
             localStorage.setItem("cart", JSON.stringify(state.cart));
         },
         clearProductAmount(state, product) {
-            delete state.cart[product.id];
+            delete state.cart[product._id];
             /* Data persistency */
             localStorage.setItem("cart", JSON.stringify(state.cart));
         },
@@ -118,6 +118,15 @@ export default createStore({
 
             localStorage.setItem("user", JSON.stringify(data.original));
         },
+        async addProduct(context, product) {
+            const response = await fetch("http://localhost:3000/product", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(product),
+            });
+        },
         async editProduct(context, data) {
             /* filter empty fields from user */
             const filteredProduct = Object.keys(data.modified).reduce(
@@ -135,7 +144,7 @@ export default createStore({
                 ...filteredProduct,
             };
 
-            fetch(`http://localhost:3000/products/${data.original.id}`, {
+            fetch(`http://localhost:3000/product/${data.original._id}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json",
@@ -143,7 +152,14 @@ export default createStore({
                 body: JSON.stringify(data.original),
             });
 
-            context.state.products[data.original.id] = data.original;
+            context.state.products[data.original._id] = data.original;
+        },
+        async deleteProduct(context, productId) {
+            fetch(`http://localhost:3000/product/${productId}`, {
+                method: "DELETE",
+            });
+
+            delete context.state.products[productId];
         },
         async registerUser({ commit }, user) {
             user.role = "Costumer";
@@ -206,11 +222,17 @@ export default createStore({
                 throw new Error("Invalid credentials");
             }
 
-            if (data[0].password === userData.password) {
-                commit("setUser", data[0]);
+            if (data.email === "admin@admin.com") {
+                throw new Error(
+                    "Admin account is not allowed to login as costumer!"
+                );
+            }
+
+            if (data.password === userData.password) {
+                commit("setUser", data);
                 commit("loggedIn");
 
-                localStorage.setItem("user", JSON.stringify(data[0]));
+                localStorage.setItem("user", JSON.stringify(data));
 
                 return true;
             }
@@ -223,11 +245,15 @@ export default createStore({
             );
             let data = await user.json();
 
-            if (data[0].password === userData.password) {
-                commit("adminLoggedIn");
-                commit("setAdmin", data[0]);
+            if (data.email !== "admin@admin.com") {
+                throw new Error("Email isn't from an admin account!");
+            }
 
-                localStorage.setItem("admin", JSON.stringify(data[0]));
+            if (data.password === userData.password) {
+                commit("adminLoggedIn");
+                commit("setAdmin", data);
+
+                localStorage.setItem("admin", JSON.stringify(data));
 
                 router.push("/admin/dashboard");
 
@@ -237,16 +263,36 @@ export default createStore({
             throw new Error("Invalid credentials or user isn't an admin");
         },
         async finishOrder({ state, getters, commit }) {
+            let productsList = [];
+
+            for (const product in state.cart) {
+                productsList.push({
+                    product_id: state.cart[product]._id,
+                    name: state.cart[product].name,
+                    image: state.cart[product].image,
+                    price: state.cart[product].price,
+                    amount: state.cart[product].amount,
+                });
+            }
+
+            console.log({
+                user_id: state.user._id,
+                products: productsList,
+                subtotal: parseInt(getters.subtotalCart),
+                shipping: parseInt(getters.shipping),
+                total: getters.subtotalCart + getters.shipping,
+            });
+
             let order = await fetch(`http://localhost:3000/orders`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    user_id: state.user.id,
-                    products: state.cart,
-                    subtotal: getters.subtotalCart,
-                    shipping: getters.shipping,
+                    user_id: state.user._id,
+                    products: productsList,
+                    subtotal: parseInt(getters.subtotalCart),
+                    shipping: parseInt(getters.shipping),
                     total: getters.subtotalCart + getters.shipping,
                 }),
             });
@@ -261,5 +307,4 @@ export default createStore({
             return data;
         },
     },
-    modules: {},
 });

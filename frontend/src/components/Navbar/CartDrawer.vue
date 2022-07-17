@@ -14,7 +14,7 @@
             <div class="flex flex-col gap-4">
                 <Card
                     v-for="item in this.$store.getters.cart"
-                    :key="item.id"
+                    :key="item.name"
                     class="transition ease-in"
                 >
                     <div class="flex items-start w-full h-full gap-4">

@@ -3,7 +3,7 @@
         <Button shape="circle" @click="$store.commit('addToCart', product)">
             +
         </Button>
-        {{ $store.getters.cart[product.id].amount }}
+        {{ $store.getters.cart[product._id].amount }}
         <Button
             shape="circle"
             @click="$store.commit('removeFromCart', product)"

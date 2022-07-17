@@ -8,7 +8,7 @@
         width="50%"
         centered
     >
-        <Form :model="formStateProduct">
+        <Form :model="formStateProduct" @finish="handleEditProductSubmit">
             <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
                 <FormItem name="email" class="w-full">
                     <p class="flex text-zinc-400">Name</p>
@@ -116,11 +116,7 @@
                 />
             </FormItem>
             <FormItem>
-                <Button
-                    type="primary"
-                    html-type="submit"
-                    @click="handleSubmitProduct('edit')"
-                >
+                <Button type="primary" html-type="submit">
                     Confirm changes
                 </Button>
             </FormItem>
@@ -136,10 +132,10 @@
         width="50%"
         centered
     >
-        <Form :model="formStateProduct">
+        <Form :model="formStateProduct" @finish="handleAddProduct">
             <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
                 <FormItem
-                    name="email"
+                    name="name"
                     class="w-full"
                     :rules="[
                         {
@@ -303,11 +299,7 @@
                 />
             </FormItem>
             <FormItem>
-                <Button
-                    type="primary"
-                    html-type="submit"
-                    @click="handleSubmitProduct('add')"
-                >
+                <Button type="primary" html-type="submit">
                     Confirm changes
                 </Button>
             </FormItem>
@@ -592,8 +584,52 @@ export default {
         };
     },
     methods: {
+        async handleAddProduct() {
+            let isEmpty = true;
+
+            let form = Object.values(this.formStateProduct);
+
+            for (let i = 0; i < form.length; i++) {
+                if (form[i] !== "") {
+                    isEmpty = false;
+                }
+            }
+
+            if (isEmpty) {
+                message.error("Form is empty, no changes were made");
+                return;
+            }
+
+            if (this.formStateProduct.price !== "") {
+                this.formStateProduct.price = parseInt(
+                    this.formStateProduct.price
+                );
+            }
+
+            if (this.formStateProduct.onStock !== "") {
+                this.formStateProduct.onStock = parseInt(
+                    this.formStateProduct.onStock
+                );
+            }
+
+            await this.$store.dispatch("addProduct", this.formStateProduct);
+
+            this.productList = this.$store.getters.products;
+
+            message.success("Product added successfully");
+
+            this.openAddProduct = false;
+        },
         handleDeleteProduct(id) {
-            delete this.productList[id];
+            Modal.confirm({
+                title: "Are you sure delete this product?",
+                content: "This action cannot be undone",
+                okText: "Yes",
+                cancelText: "No",
+                onOk() {
+                    store.dispatch("deleteProduct", id);
+                },
+            });
         },
         handleEditUser(id) {
             this.editUserID = id;
@@ -603,46 +639,44 @@ export default {
             this.editProductID = id;
             this.openEditProduct = true;
         },
-        async handleSubmitProduct(mode) {
-            if (mode === "edit") {
-                let isEmpty = true;
+        async handleEditProductSubmit() {
+            let isEmpty = true;
 
-                let form = Object.values(this.formStateProduct);
+            let form = Object.values(this.formStateProduct);
 
-                for (let i = 0; i < form.length; i++) {
-                    if (form[i] !== "") {
-                        isEmpty = false;
-                    }
+            for (let i = 0; i < form.length; i++) {
+                if (form[i] !== "") {
+                    isEmpty = false;
                 }
-
-                if (isEmpty) {
-                    message.error("Form is empty, no changes were made");
-                    return;
-                }
-
-                if (this.formStateProduct.price !== "") {
-                    this.formStateProduct.price = parseInt(
-                        this.formStateProduct.price
-                    );
-                }
-
-                if (this.formStateProduct.onStock !== "") {
-                    this.formStateProduct.onStock = parseInt(
-                        this.formStateProduct.onStock
-                    );
-                }
-
-                await this.$store.dispatch("editProduct", {
-                    original: this.productList[this.editProductID],
-                    modified: this.formStateProduct,
-                });
-
-                this.productList = this.$store.getters.products;
-
-                message.success("Product edited successfully");
-
-                this.openEditProduct = false;
             }
+
+            if (isEmpty) {
+                message.error("Form is empty, no changes were made");
+                return;
+            }
+
+            if (this.formStateProduct.price !== "") {
+                this.formStateProduct.price = parseInt(
+                    this.formStateProduct.price
+                );
+            }
+
+            if (this.formStateProduct.onStock !== "") {
+                this.formStateProduct.onStock = parseInt(
+                    this.formStateProduct.onStock
+                );
+            }
+
+            await this.$store.dispatch("editProduct", {
+                original: this.productList[this.editProductID],
+                modified: this.formStateProduct,
+            });
+
+            this.productList = this.$store.getters.products;
+
+            message.success("Product edited successfully");
+
+            this.openEditProduct = false;
         },
         updateProductCards() {
             this.productList = Object.values(store.getters.products)

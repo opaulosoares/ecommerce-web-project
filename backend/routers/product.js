@@ -47,16 +47,20 @@ router.patch('/:id', async(req, res) => {
     if (!mongoose.isValidObjectId(req.params.id))
         return res.status(400).send({error: INVALID_ID});
     
-    let targetProduct = await Product.findByIdAndUpdate(
-        req.params.id,
-        {...req.body},
-        {returnDocument: "after"} // returns the updated Product
-    ).exec();
+    try {
+        let targetProduct = await Product.findByIdAndUpdate(
+            req.params.id,
+            {...req.body},
+            {returnDocument: "after"} // returns the updated Product
+        ).exec();
 
-    if (targetProduct === null)
-        return res.status(404).send({error: PRODUCT_NOT_FOUND});
-    
-    return res.status(200).send(targetProduct);
+        if (targetProduct === null)
+            return res.status(404).send({error: PRODUCT_NOT_FOUND});
+        
+        return res.status(200).send(targetProduct);
+    } catch (e) {
+        return res.status(404).send({error: e});
+    }
 });
 
 module.exports = router;

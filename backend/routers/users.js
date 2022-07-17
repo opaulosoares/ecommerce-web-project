@@ -64,16 +64,20 @@ router.patch('/:id', async (req, res) => {
     if (!mongoose.isValidObjectId(req.params.id))
         return res.status(400).send({ error: INVALID_ID });
 
-    let targetUser = await User.findByIdAndUpdate(
-        req.params.id,
-        { ...req.body },
-        { returnDocument: "after" }
-    ).exec();
+    try {
+        let targetUser = await User.findByIdAndUpdate(
+            req.params.id,
+            { ...req.body },
+            { returnDocument: "after" }
+        ).exec();
 
-    if (targetUser === null)
-        return res.status(404).send({ error: USER_NOT_FOUND });
+        if (targetUser === null)
+            return res.status(404).send({ error: USER_NOT_FOUND });
 
-    return res.status(200).send(targetUser);
+        return res.status(200).send(targetUser);
+    } catch (e) {
+        return res.status(404).send({error: e});
+    }
 });
 
 module.exports = router;

@@ -17,10 +17,9 @@ Feito por:
 
 - [fluffshop - E-commerce Web Project](#fluffshop---e-commerce-web-project)
 	- [0. Introdução](#0-introdução)
-		- [0.1. Sumário do Documento](#01-sumário-do-documento)
-		- [0.2. Seções de cada Milestone](#02-seções-de-cada-milestone) 
-		- [0.3. Detalhes da empresa fictícia](#03-detalhes-da-empresa-fictícia)
-		- [0.4. Protótipos](#04-protótipos)
+		- [0.1. Sumário do Documento](#01-sumário-do-documento) 
+		- [0.2. Detalhes da empresa fictícia](#02-detalhes-da-empresa-fictícia)
+		- [0.3. Protótipos](#03-protótipos)
 	- [1. Documento de Requisitos](#1-documento-de-requisitos)
 		- [1.1. Requisitos da aplicação](#11-requisitos-da-aplicação)
 		- [1.2. Requisitos da base de dados](#12-requisitos-da-base-de-dados)
@@ -35,21 +34,13 @@ Feito por:
 	- [5. Procedimento de Execução](#5-procedimento-de-execução)
 	- [6. Problemas](#6-problemas)
 	- [7. Comentários](#7-comentários)
-		
-### 0.2. Seções de cada _Milestone_
 
--   <a href="https://github.com/opaulosoares/ecommerce-web-project/tree/main/milestone-1" target="_blank">
-    Milestone 1
-    </a>
--   Milestone 2 - TO-DO
--   Milestone 3 - TO-DO
-
-### 0.3. Detalhes da empresa fictícia
+### 0.2. Detalhes da empresa fictícia
 
 -   **Nome:** Fluffshop
 -   **Área de atuação:** _Pet-shop_ para cães e gatos.
 
-### 0.4. Protótipos
+### 0.3. Protótipos
 
 #### Figma
 
@@ -84,7 +75,7 @@ Protótipo em HTML + CSS
     -   No sistema, os **administradores** são responsáveis por gerir outros administradores e produtos exibidos no site. O **administrador** possui **nome**, **identificador**, **telefone** e **e-mail**.
     -   No sistema, os usuários **comuns** utilizam o sistema para comprar produtos de Pet Shop. Os usuários **comuns** possuem **nome**, **identificador**, **telefone**, **endereço** e **e-mail**.
 
--   O sistema possui uma série de **produtos** que são exibidos para a compra _on-line_. Os registros dos **produtos** são compostos por **nome**, **identificador**, **foto**, **descrição**, **preço**, **pets recomendados** (especifica para qual tipo de _pet_ esse produto é recomendado), **quantidade em estoque**, **quantidade vendida**, **espécie do animal**, **idade do animal** e **tipo do produto**.
+-   O sistema possui uma série de **produtos** que são exibidos para a compra _on-line_. Os registros dos **produtos** são compostos por **nome**, **identificador**, **foto**, **descrição**, **preço**, **quantidade em estoque**, **quantidade vendida**, **espécie do animal**, **idade do animal** e **tipo do produto**.
 
 #### Administrador
 
@@ -128,7 +119,6 @@ Protótipo em HTML + CSS
     - Descrição
     - Foto
     - Preço
-    - PetsRecomendados
     - QuantidadeEstoque
     - QuantidadeVendida
     - EspécieAnimal
@@ -181,8 +171,6 @@ Protótipo em HTML + CSS
         - Gaiolas e caixas (Gates, Crates & Kernels)
         - Tosa (Grooming)
         - Brinquedos (Toys)
-
----
 
 ## 2. Descrição do projeto
 
@@ -246,14 +234,24 @@ Senha: admin
 
 ### 4.1. Testes Propostos
 
-#### Teste de __log-in__
+#### Teste de __log-in__ como usuário comum
 
 1. No canto superior direito, clique no botão azul `Login`.
-2. Preencha as informações relativas ao __log-in__, sendo uma conta de usuário comum ou administrador.
+2. Preencha as informações relativas ao __log-in__, sendo uma conta de usuário comum.
 3. Após preenchidas as informações, clique no botão em azul `Login`, abaixo dos campos preenchidos.
 4. Se as informações estiverem corretas, o usuário agora está logado e será redirecionado para a página principal.
 
 #### Teste do fluxo do usuário cliente
+
+1. No canto superior direito, clique no botão azul `Login`.
+2. Preencha as informações relativas ao __log-in__, sendo uma conta de usuário comum, e realize o __log-in__.
+3. Coloque alguns produtos no carrinho, utilizando o botão `Add to Cart`.
+4. Acesse o carrinho utilizando o botão de carrinho, ao lado do nome da conta, no canto superior direito.
+5. Configure as quantidades dos produtos de acordo com o desejado. Há também a possibilidade de remover produtos com o botão de `Lixeira`.
+6. No carrinho, clique em `Go to Checkout`, no canto superior direito.
+7. Confira o valor dos produtos e o valor total e continue com o pedido, através do botão azul `Confirm Order`, no canto inferior esquerdo.
+8. Confirme o endereço de entrega através do botão azul `Finish Order`.
+9. O pedido foi feito com êxito.
 
 #### Teste da alteração de informações da conta do cliente
 
@@ -266,11 +264,39 @@ Senha: admin
 
 1. Se logado como usuário comum (nesse caso, com a conta `john@email.com`), o usuário é barrado de acessar as rotas de administrador (como `/admin/dashboard`) através da mensagem de erro `Please log-in as admin to see this page!`. A rota só pode ser acessada por uma conta de administrador.
 
+#### Teste de __log-in__ como usuário administrador
+
+1. Acesse a rota `/admin`.
+2. Preencha as informações relativas ao __log-in__, sendo uma conta de usuário administrador.
+3. Após preenchidas as informações, clique no botão em azul `Login`, abaixo dos campos preenchidos.
+4. Se as informações estiverem corretas, o administrador agora está logado e será redirecionado para a página principal de administrador.
+
 #### Teste de edição de produtos
+
+1. Acesse a rota `/admin`.
+2. Preencha as informações relativas ao __log-in__, sendo uma conta de usuário administrador, e realize o __log-in__.
+3. Na página principal, selecione um produto e clique no botão branco `Edit`.
+4. Modifique alguns dos atributos.
+5. Salve as modificações clicando no botão `Confirm Changes`, em azul.
+6. As novas informações do produto estão salvas.
+
+#### Teste de remoção de produtos
+
+1. Acesse a rota `/admin`.
+2. Preencha as informações relativas ao __log-in__, sendo uma conta de usuário administrador, e realize o __log-in__.
+3. Na página principal, selecione um produto e clique no botão vermelho `Remove`.
+4. Confirme a remoção através do botão `Yes`.
+5. O produto foi removido.
 
 #### Teste de edição de usuários
 
-#### Teste de permissão do administrador
+1. Acesse a rota `/admin`.
+2. Preencha as informações relativas ao __log-in__, sendo uma conta de usuário administrador, e realize o __log-in__.
+3. Clique na aba `Users`, abaixo do __banner__ da loja.
+4. Selecione um usuário e clique no botão `Edit`, em branco.
+5. Modifique alguns dos atributos do usuário.
+6. Salve as modificações clicando no botão `Confirm Changes`, em azul.
+7. As novas informações do usuário estão salvas.
 
 ### 4.2. Resultados dos Testes
 

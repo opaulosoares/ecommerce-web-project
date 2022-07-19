@@ -16,7 +16,7 @@ router.get('/', async(req, res) => {
         users = users.filter(el => el.email === req.query.email)[0]
     }
 
-    if (users.length === 0) {
+    if (users === undefined) {
         return res.status(404).send({error: USER_NOT_FOUND});
     } else {
         return res.status(200).send(users);

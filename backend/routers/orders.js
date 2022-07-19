@@ -17,7 +17,7 @@ router.get('/', async(req, res) => {
         orders = orders.filter(el => el.user_id == req.query.user)
     }
 
-    if (orders.length === 0) {
+    if (orders === undefined) {
         return res.status(404).send({error: ORDER_NOT_FOUND});
     } else {
         return res.status(200).send(orders);

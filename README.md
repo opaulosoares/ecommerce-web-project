@@ -304,31 +304,60 @@ Todos os testes tiveram o resultado esperado.
 
 ## 5. Procedimento de Execução
 
-Para teste do site, é necessário clonar o repositório e ter o `Nodemon` e o `json-server` instalados. Para instalar o `Nodemon`:
-```
-npm install --global nodemon
+#### Inicializando o back-end
+
+De início, é necessário ir até a pasta `backend`. Na raiz do projeto:
+
+```shell
+cd backend
 ```
 
-Após isso, iremos instalar o `json-server` e as dependências do projeto:
+Logo após, começamos instanciando o MongoDB. 
+
+```shell
+sudo service mongodb start
+mongosh mongodb://localhost:27017/fluffshop
 ```
-git clone https://github.com/opaulosoares/ecommerce-web-project
-cd ecommerce-web-project
+
+Após execução, saia do _shell_ interativo do MongoDB.
+
+Em seguida, instale as dependências do _back-end_ do projeto através dos comandos
+
+```shell
+npm install
+npm run populate
+```
+
+Por fim, inicialize a API através do comando
+
+```shell
+npm start
+```
+
+API está rodando no endereço `http://localhost:3000`.
+
+#### Inicializando o front-end
+
+De início, é necessário ir até o diretório `frontend`. Na raiz do projeto e em outro terminal:
+
+```shell
+cd frontend
+```
+
+Em seguida, instalamos as dependências do _front-end_ do projeto através dos comando
+
+```shell
 npm install
 ```
 
-Dentro do diretório `ecommerce-web-project`, para executar o `json-server`:
-```
-cd app/src/data
-nodemon server.js
-```
+Executamos o _front-end_ através do comando
 
-Por fim, executaremos o servidor **em outro terminal** através dos comandos:
-```
-cd ecommerce-web-project/app
+```shell
 npm run serve
 ```
 
 O site, agora, está ativo no endereço `http://localhost:8080`.
+
 ## 6. Problemas
 
 Não foram encontrados problemas críticos no desenvolvimento do projeto.

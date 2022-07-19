@@ -38,6 +38,15 @@ const schema = new mongoose.Schema({
     role: {
         type: String,
         required: true
+    },
+    cardNumber: {
+        type: String
+    },
+    cardExp: {
+        type: String
+    },
+    cardCVV: {
+        type: String
     }
 })
 

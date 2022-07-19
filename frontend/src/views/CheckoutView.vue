@@ -135,10 +135,16 @@ export default {
             store.commit("clearProductAmount", product);
         },
         finishOrder() {
-            this.$store.dispatch("finishOrder").then(() => {
-                this.openModal = false;
-                message.success("Order placed successfully!");
-            });
+            this.$store
+                .dispatch("finishOrder")
+                .then(() => {
+                    this.openModal = false;
+                    message.success("Order placed successfully!");
+                })
+                .catch((e) => {
+                    message.error(e.message);
+                    this.toggleModal();
+                });
         },
     },
 };

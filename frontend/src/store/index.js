@@ -283,14 +283,6 @@ export default createStore({
                 });
             }
 
-            console.log({
-                user_id: state.user._id,
-                products: productsList,
-                subtotal: parseInt(getters.subtotalCart),
-                shipping: parseInt(getters.shipping),
-                total: getters.subtotalCart + getters.shipping,
-            });
-
             let order = await fetch(`http://localhost:3000/orders`, {
                 method: "POST",
                 headers: {
@@ -304,7 +296,16 @@ export default createStore({
                     total: getters.subtotalCart + getters.shipping,
                 }),
             });
+
             let data = await order.json();
+
+            console.log(data);
+
+            if (order.status === 400) {
+                throw new Error(
+                    `The product ${data.product} doens't have this much quantity in stock, please try again`
+                );
+            }
 
             await new Promise((resolve) => setTimeout(resolve, 500));
 
